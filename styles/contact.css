@@ -1,0 +1,46 @@
+.map{
+  grid-column: 2;
+}
+
+.data{
+  grid-column: 3;
+}
+
+.data li{
+  margin-bottom: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.data li::before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: var(--secondaryColor);
+}
+
+
+.copy{
+  grid-column: 3/5;
+  margin-bottom: 2rem;
+  background: var(--secondaryColor);
+}
+
+.copy p{
+  padding: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 700px){
+  .copy{
+    grid-column: 1;
+    margin: 0
+  }
+
+  .data, .map{
+    grid-column: 1/3;
+  }
+}

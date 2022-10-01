@@ -1,0 +1,31 @@
+.list-faq{
+  grid-column: 2/4;
+}
+
+
+.list-faq dt{
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  margin: .2rem 0 .5rem 0;
+  color: var(--secondaryTextColor);
+}
+
+.list-faq dt::before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: var(--secondaryColor);
+}
+
+.list-faq dd{
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0 0 .5rem 30px;
+}
+
+@media screen and (max-width: 700px){
+  .list-faq{
+    grid-column: 1/3;
+  }
+}

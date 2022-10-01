@@ -1,0 +1,133 @@
+
+@import url('./global.css');
+
+.menu {
+  grid-column: 3/5;
+  margin: 2rem 0;
+  background-color: var(--secondaryColor)
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+  color: var(--textColor);
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: .1rem;
+}
+
+
+.menu li:last-child a::after {
+  position: relative;
+  content: '➡';
+  padding: 10px;
+  left: 0;
+  transition: .3s ease;
+}
+
+.menu li:last-child a:hover::after {
+  left: 10px;
+}
+
+.grid-section{
+  grid-column: 2/4;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 90px 300px 1fr;
+  grid-gap: 20px;
+  margin-bottom: 4rem;
+}
+
+.title{
+  font-family: 'Playfair Display SC', Georgia;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1/4;
+}
+
+
+.animals h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-bottom: 1rem;
+  color: var(--secondaryTextColor);
+}
+
+.animals h3::before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background: var(--secondaryColor);
+}
+
+.animals p {
+  font-family: Helvetica, Arial;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.list-animals{
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.list-animals::-webkit-scrollbar{
+  width: 18px;
+}
+
+.list-animals::-webkit-scrollbar-thumb{
+  background: var(--secondaryColor);
+  border-left: 4px solid var(--primaryColor);
+  border-right: 4px solid var(--primaryColor);
+}
+
+.animals-description{
+  grid-column: 3;
+}
+
+.animals-description section{
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 700px){
+  .menu, .grid-section{
+    grid-column: 1;
+  }
+
+  .menu{
+    margin: 0;
+  }
+
+  .grid-section{
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid-section h1,.grid-section h2{
+   font-size: 3rem;
+  }
+
+  .list-animals{
+    grid-column: 1;
+  }
+}

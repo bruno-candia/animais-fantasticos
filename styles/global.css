@@ -1,0 +1,21 @@
+:root {
+  --primaryColor: #faf6ed;
+  --secondaryColor: #fb5;
+  --textColor: #222;
+  --secondaryTextColor: #E54;
+}
+
+body {
+  background: var(--primaryColor);
+  color: var(--textColor);
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+
+@media screen and (max-width: 700px){
+  body{
+    grid-template-columns: 1fr;
+  }
+}
